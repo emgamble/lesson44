@@ -1,15 +1,19 @@
 package com.company;
 
-public class bankAccount implements Comparable {
+public class bankAccount {
 
         public bankAccount(String nm, double amt) {
             name = nm;
             balance = amt;
         }
 
+
+
         public int compareTo(Object otherObject) {
             com.company.bankAccount otherAccount = (com.company.bankAccount) otherObject;
             int retValue;
+
+            //sorts alphabetically
             if (name.charAt(0) < otherAccount.name.charAt(0)) {
                 retValue = -1;
             } else {
@@ -19,10 +23,10 @@ public class bankAccount implements Comparable {
                     retValue = 0;
                 }
             }
-            return retValue;
 
-           /* sorts based on balance
-           if (balance < otherAccount.balance) {
+
+            //sorts based on account balance
+          if (balance < otherAccount.balance) {
                 retValue = -1;
             } else {
                 if (balance > otherAccount.balance) {
@@ -31,7 +35,7 @@ public class bankAccount implements Comparable {
                     retValue = 0;
                 }
             }
-            return retValue;*/
+            return retValue;
         }
 
         public void deposit(double dp) {

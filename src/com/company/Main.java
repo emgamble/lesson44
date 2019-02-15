@@ -24,11 +24,13 @@ public class Main {
 
             ba[j]= new bankAccount(name, amount);
 
-
-
         }
+
         Comparator comp =  new BA_comparator();
-	    Arrays.sort(ba, comp);
+        Arrays.sort(ba, comp);
+
+
+
 
 	    for (j = 0; j < ba.length; j++){
             System.out.println(ba[j].name + " >>> " + ba[j].balance);
